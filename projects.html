@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-zFjJdl5PKVJmFcNUoQjg75JImHdFoOcwte5akVK+J/vw1Qw+63c5iuOsB4t0s8HK/AXbEsiJC4fN3+7p9MhNvg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .project-card {
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      padding: 20px;
+      margin: 10px;
+      transition: transform 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      
+      color: #050505;
+    }
+
+    .project-duration {
+      font-size: 16px;
+      line-height: 1.5;
+      color: blue
+    }
+    .project-description {
+      font-size: 16px;
+      color: #222121;
+      line-height: 1.5;
+    }
+    .technologies {
+      /* Additional styling for technologies */
+      margin-top: 12px;
+      color: #555;
+    }
+    technologies span {
+      display: inline-block;
+      margin-right: 8px;
+      padding: 6px 12px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+   
+
+    .nav-bar {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-right: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #007bff;
+    }
+
+    .logout-btn {
+      padding: 8px 16px;
+      background-color: rgba(255, 0, 0, 0.893);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .logout-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .logout-icon {
+      margin-right: 5px;
+    }
+
+    .filter-container {
+      display: flex;
+      margin: 20px auto;
+      width: 50%;
+      align-items: center;
+    }
+
+    .filter-label {
+      margin-right: 10px;
+    }
+
+    .filter-input {
+      padding: 8px;
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="certification.html">Certifications</a></li>
+
+    </ul>
+    <a href="index.html" class="logout-btn">
+      <i class="fas fa-sign-out-alt logout-icon"></i>
+      Logout
+    </a>
+  </nav>
+
+  <header>
+    <h1>Projects</h1>
+  </header>
+
+  <div class="filter-container">
+    <label for="filter-input" class="filter-label">Filter:</label>
+    <input
+      type="text"
+      id="filter-input"
+      class="filter-input"
+      placeholder="Enter technology"
+    />
+  </div>
+
+  <div class="projects-container">
+    <div class="project-card">
+      <h2 class="project-title">No End Coaching Portal</h2>
+      <p class="project-description">Designed & developed a PoC Full Stack Mobile App for a Student Management with functionalities of CRUD operation for Teacher and Student moreover registering courses and many more. Built the application with Flutter, Dart, MySQL, PHP.</p>
+      <p class="project-duration">Sept 2022 - Dec 2022</p>
+      <div class="technologies">
+        <span>Mobile Application</span>
+        <span>Flutter</span>
+        <span>Dart</span>
+        <span>PHP</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h2 class="project-title">Streamer</h2>
+      <p class="project-duration"> Sept 2021 - Dec 2021</p>
+      <p class="project-description">Applying Data Structure knowledge of Hashing, BST and graphs to organize streaming data of size more then 1 million according to their reviews and popularity etc after data cleaning.</p>
+      <div class="technologies">
+        <span> Console Application</span>
+        <span>C++</span>
+        <span>Data Structures</span>
+        
+      </div>
+    </div> 
+    <div class="project-card">
+      <h2 class="project-title">E-Commerce Application</h2>
+      <p class="project-duration"> Apr 2023 - June 2023</p>
+      <p class="project-description">Built with Flutter, Dart, and Node.js, this service-based E-commerce app offers seamless navigation and secure transactions. Offering an array of services, it enables easy browsing, purchasing, and transactions, ensuring a user-friendly interface while leveraging Node.js for robust backend functionality</p>
+      <div class="technologies">
+        <span>Flutter</span>
+        <span>Dart</span>
+        <span>Node JS</span>
+    </div>
+    </div>
+    
+    <div class="project-card">
+      <h2 class="project-title">AI Medical ChatBot</h2>
+      <p class="project-duration"> Apr 2023 - June 2023</p>
+      <p class="project-description">Python chatbot for medical queries, providing instant and accurate information on health-related concerns efficiently</p>
+      <div class="technologies">
+        <span>Python</span>
+        <span>Artificial Intelligance</span>
+        <span>Machine Learning</span>
+      </div>
+    <!-- Add more project cards following the same structure -->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script>
+    const filterInput = document.getElementById("filter-input");
+    const projectsContainer = document.querySelector(".projects-container");
+
+    filterInput.addEventListener("keyup", () => {
+      const filterText = filterInput.value.toLowerCase();
+      const projects = projectsContainer.querySelectorAll(".project-card");
+
+      projects.forEach((project) => {
+        const projectTechnologies = project.querySelector(".technologies").textContent.toLowerCase();
+
+        if (projectTechnologies.includes(filterText)) {
+          project.style.display = "block";
+        } else {
+          project.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

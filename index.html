@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K200288 Login</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+  <style>
+    .container {
+      text-align: center;
+      border: 2px solid #ccc; /* Adding a border to the container */
+      border-radius: 8px; /* Rounded corners */
+      padding: 20px; /* Add padding for space inside the container */
+      background-color: #fff; /* Setting a white background */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #333;
+      align-items: center;
+    }
+
+    .input-container {
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .password-toggle {
+      position: absolute; /* Make the icon absolute for positioning */
+      top: 50%; /* Vertically center the icon */
+      right: 10px; /* Position the icon on the right side of the input */
+      transform: translateY(
+        -50%
+      ); /* Counteract the vertical centering of the icon */
+      cursor: pointer; /* Make the icon clickable */
+    }
+
+    .input-field {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: dodgerblue;
+      box-shadow: 0 0 5px dodgerblue;
+    }
+
+    .btn-primary {
+      background-color: dodgerblue;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-primary:hover {
+      background-color: #007acc; /* Darker shade on hover */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+  <body>
+    <form id="loginForm">
+      <div class="container">
+        <h2>Login</h2>
+        <div class="input-container">
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            class="input-field"
+          />
+        </div>
+        <div class="input-container">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            class="input-field"
+          />
+          <span class="password-toggle"><i class="fas fa-eye"></i></span>
+        </div>
+        <button type="submit" class="btn-primary">Login</button>
+      </div>
+    </form>
+
+    <script>
+      const passwordInput = document.getElementById("password");
+      const passwordToggle = document.querySelector(".password-toggle");
+
+      passwordToggle.addEventListener("click", () => {
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          passwordToggle.querySelector("i").classList.add("fa-eye-slash");
+        } else {
+          passwordInput.type = "password";
+          passwordToggle.querySelector("i").classList.remove("fa-eye-slash");
+        }
+      });
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          // Prevent the default form submission behavior
+          event.preventDefault();
+
+          // Check if the entered email and password match the specified values
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+
+          if (email === "k200288@nu.edu.pk" && password === "sharjeel123") {
+            // Redirect to home.html
+            window.location.href = "home.html";
+          } else {
+            // Display an error message or take other actions if the credentials are incorrect
+            alert("Invalid email or password. Please try again.");
+          }
+        });
+    </script>
+  </body>
+</html>
